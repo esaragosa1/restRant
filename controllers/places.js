@@ -49,10 +49,22 @@ router.get('/:id', (req, res) => {
     res.render('error404')
   }
   else {
-    res.render('places/show', { place: places[id] }) //function show (data) (don't want to write this each time=>data.place.name)
+    res.render('places/show', { place: places[id], id }) //function show (data) (don't want to write this each time=>data.place.name)
   }
 })
 
-
+//Edit Route
+router.get('/:id/edit', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+      res.render('error404')
+  }
+  else if (!places[id]) {
+      res.render('error404')
+  }
+  else {
+    res.render('places/edit', { place: places[id] })
+  }
+})
 
 module.exports = router
