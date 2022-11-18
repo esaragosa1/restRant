@@ -1,5 +1,5 @@
 body {
-  background-color: lightblue;
+  background-color: #7CB0B6;
   text-align: center;
 }
 
@@ -9,37 +9,48 @@ main {
   background-color: white;
 }
 
-
 h1 {
-    text-align: center;
-    color: cornflowerblue;
-  }
- 
+  text-align: center;
+  color: #071E22;
+}
+
+h2 {
+  text-align: center;
+  color: #7CB0B6;
+}
+
+/* Not Nessacary */
+img {
+  width: 500px;
+  height: 400px;
+}
+
 nav {
-    background-color: cornflowerblue;
-    padding: 10px;
+  background-color: #071E22;
+  padding: 10px;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
+  list-style-type: none;
+  margin: 0;
 }
 
 nav li {
-    display: inline;
-    margin-right: 25px;
+  display: inline;
+  margin-right: 25px;
 }
 
 nav a {
-    color: white;
-    font-size: 1.5em;
+  color: white;
+  font-size: 1.5em;
 }
 
 nav a:hover {
-    color: pink;
-    text-decoration: none;
+  color: pink;
+  text-decoration: none;
 }
 
-img {
-  width: 250px;
+.bor {
+  border: 1px;
+  color: red;
 }

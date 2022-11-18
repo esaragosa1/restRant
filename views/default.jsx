@@ -1,32 +1,21 @@
 const React = require('react')
+const Def = require('./default')
 
-function Def (html) {
+function error404 () {
     return (
-        <html>
-            <head>
-                <title>Title</title>
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
-                <link rel="stylesheet" href="/css/style.css"/>
-            </head>
-            <body>
-            <nav>
-                <ul>
-                    <li>
-                    <a href="/">Home</a>
-                    </li>
-                    <li>
-                    <a href="/places">Places</a>
-                    </li>
-                    <li>
-                    <a href="/places/new">Add Place</a>
-                    </li>
-                </ul>
-            </nav>
-
-                {html.children}
-            </body>
-        </html>
+      <Def>
+          <main>
+              <h1>404: PAGE NOT FOUND</h1>
+              <p>Oops, sorry, we can't find this page!</p>
+              <div>
+              <img src="/images/error.jpg" alt="404" />
+              <div>
+              Photo by <a href="https://unsplash.com/@leekos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kostiantyn Li</a> on <a href="https://unsplash.com/s/photos/404?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+              </div>
+              </div>
+          </main>
+      </Def>
     )
-  }
-  
-module.exports = Def
+  }  
+
+module.exports = error404
